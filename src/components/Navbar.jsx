@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ExternalLink } from 'lucide-react';
-import LogoKKP from '../assets/logo-kkp.png';
+import LogoKKP from '/src/assets/logo-kkp.png';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
