@@ -25,11 +25,12 @@ import fotoKukuh from "../assets/Kukuh.jpeg";
 import fotoFaisal from "../assets/Faisal.jpeg";
 import fotoAik from "../assets/Aik.jpeg";
 import fotoYoyo from "../assets/Yoyo.jpeg";
-import fotoAri from "../assets/Ari.jpeg";
+import fotoAri from "../assets/Ari.jpg";
 import fotoAdianto from "../assets/Adianto.jpeg";
 import fotoAde from "../assets/Ade.jpeg";
 import fotoDody from "../assets/Dody.jpeg";
 import fotoHanifa from "../assets/Hanifa.jpeg";
+import fotoRizal from "../assets/Rizal.jpeg";
 
 export default function Structure() {
   const [activeTab, setActiveTab] = useState('pimpinan');
@@ -87,7 +88,7 @@ export default function Structure() {
         { name: "Veronika Eri F, S.Pi", role: "Tim Was Biro Umum & Biro PBJ", photo: fotoVeronika },
         { name: "Muhamad Widodo, SH, MH", role: "Tim Was Biro SDMAO & Biro Hukum", photo: fotoWidodo },
         { name: "Tutut Sumarmi, S.Sos", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoTutut },
-        { name: "Ari Setiobudi", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoAri },
+        { name: "Ari Setyobudi", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoAri },
         { name: "Puji Astutuik, S.Pi", role: "Tim Was Biro Keuangan, BMN & LPMUKP", photo: fallbackPhoto },
         { name: "Hari Risnandar, A.Md.", role: "Tim Was Biro Keuangan, BMN & LPMUKP", photo: fotoHari },
         { name: "Kukuh Priambodo, S.Kom", role: "Tim Was Pusdatin & Pusjakstra", photo: fotoKukuh },
@@ -125,7 +126,7 @@ export default function Structure() {
         { name: "Tibyan D.M.P, S.Kom", role: "Tim Was Sekretariat & Dit. P3K", photo: fallbackPhoto },
         { name: "Hanifa Dwi Santi, S.E", role: "Tim Was Sekretariat & Dit. P3K", photo: fotoHanifa },
         { name: "Faisal Reza P, S.E, M.M", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fotoFaisal },
-        { name: "M. Rizal A.T.N, S.Pi", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fallbackPhoto },
+        { name: "M. Rizal A.T.N, S.Pi", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fotoRizal },
         { name: "Adianto Nugroho, S.E", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan", photo: fotoAdianto },
         { name: "Tri Nur Utami, S.Pi", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan", photo: fotoUtami }
       ]
