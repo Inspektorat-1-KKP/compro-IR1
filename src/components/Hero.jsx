@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light text-slate-900 leading-[1.15] tracking-tight">
-              Itjen Kuat, KKP Hebat <br />
+              ITJEN KUAT, KKP HEBAT <br />
               <span className="font-extrabold text-sky-950">Tata Kelola Kelautan</span>
             </h2>
 
