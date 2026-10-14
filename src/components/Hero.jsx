@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Award, Building } from 'lucide-react';
+import gedungKKP from '../assets/gedungKKP.jpg';
 
 export default function Hero() {
   return (
@@ -21,7 +22,7 @@ export default function Hero() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light text-slate-900 leading-[1.15] tracking-tight">
-              Amanah & Akselerasi <br />
+              Itjen Kuat, KKP Hebat <br />
               <span className="font-extrabold text-sky-950">Tata Kelola Kelautan</span>
             </h2>
 
@@ -69,9 +70,9 @@ export default function Hero() {
             <div className="relative border border-slate-200 bg-white p-3 shadow-2xl">
               <div className="aspect-[4/3] overflow-hidden relative group bg-slate-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" 
+                  src={gedungKKP} 
                   alt="Sektor Kelautan KKP" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                  className="w-full h-full group-hover:scale-105 transition duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end p-6">
                   <p className="text-xs font-serif italic text-white tracking-wide">

@@ -1,316 +1,376 @@
 import React, { useState } from 'react';
-import { ChevronRight, X, Briefcase, Award, Shield, FileText, UserCheck } from 'lucide-react';
+import { ChevronRight, X, ShieldCheck, FileText, Users, Building2, UserCheck, Award } from 'lucide-react';
+
+// Import foto lokal presisi sesuai isi folder src/assets/
+import fotoDianita from "../assets/Dianita.jpg";
+import fotoFirdaus from "../assets/Firdaus.jpg";
+import fotoFirman from "../assets/Firman.jpeg";
+import fotoHari from "../assets/Hari.jpeg";
+import fotoHaris from "../assets/Haris.jpg";
+import fotoIlham from "../assets/ilham.JPG";
+import fotoIriawanti from "../assets/Iriawanti.jpg";
+import fotoMaharami from "../assets/maharami.jpeg";
+import fotoMubin from "../assets/Mubin.jpg";
+import fotoTaufiqur from "../assets/Taufiqur.jpeg";
+import fotoTri from "../assets/Tri.jpeg";
+import fotoTutut from "../assets/Tutut.jpeg";
+import fotoUtami from "../assets/Utami.jpeg";
+import fotoVeronika from "../assets/Veronika.jpg";
+import fotoWidodo from "../assets/Widodo.JPG";
+import fotoWindy from "../assets/Windy.jpeg";
+import fotoWirata from "../assets/Wirata.jpeg";
+import fotoYeye from "../assets/Yeye.jpeg";
+import fotoAsep from "../assets/Asep.jpeg";
+import fotoKukuh from "../assets/Kukuh.jpeg";
+import fotoFaisal from "../assets/Faisal.jpeg";
+import fotoAik from "../assets/Aik.jpeg";
+import fotoYoyo from "../assets/Yoyo.jpeg";
+import fotoAri from "../assets/Ari.jpeg";
+import fotoAdianto from "../assets/Adianto.jpeg";
+import fotoAde from "../assets/Ade.jpeg";
+import fotoDody from "../assets/Dody.jpeg";
+import fotoHanifa from "../assets/Hanifa.jpeg";
 
 export default function Structure() {
-  // Tab Aktif ala Emtek: "all" | "pimpinan" | "katimja" | "jfa"
   const [activeTab, setActiveTab] = useState('pimpinan');
-  const [selectedPerson, setSelectedPerson] = useState(null);
+  const [selectedTeam, setSelectedTeam] = useState(null);
 
-  // 1. Data Pimpinan Utama
+  // Foto cadangan untuk personel yang belum punya file foto tersendiri di folder assets
+  const fallbackPhoto = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300";
+
+  // Data Pimpinan Utama
   const topManagement = [
     {
       name: "Dr. Abdul Mubin, ST., SH., MH., CSSL",
       nip: "197101131996031001",
       title: "Inspektur I",
-      category: "Pimpinan Utama",
-      photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=500",
-      bio: "Memimpin dan mengoordinasikan seluruh pelaksanaan pengawasan intern di lingkungan Kementerian Kelautan dan Perikanan guna menjamin akuntabilitas, transparansi, serta efektivitas kinerja."
+      photo: fotoMubin,
+      description: "Memimpin penyusunan kebijakan teknis, pelaksanaan pengawasan intern, pemantauan tindak lanjut, dan pelaporan di lingkungan Inspektorat I."
     },
     {
       name: "Ir. Iriawanti",
-      nip: "-",
+      nip: "196407141992032004",
       title: "Koordinator Pengawasan",
-      category: "Pimpinan Utama",
-      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=500",
-      bio: "Bertanggung jawab mengoordinasikan secara teknis pelaksanaan pengawasan intern serta evaluasi pengawasan lintas sektor."
-    },
-    {
-      name: "Tri Yuliastini, S.Pi.",
-      nip: "-",
-      title: "Kepala Sub Bagian Tata Usaha",
-      category: "Pimpinan Utama",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=500",
-      bio: "Mengelola urusan persuratan, kepegawaian, keuangan, serta administrasi operasional dan BMN di lingkungan Inspektorat I."
+      photo: fotoIriawanti,
+      description: "Mengoordinasikan pelaksanaan pengawasan teknis intern secara independen dan akuntabel."
     }
   ];
 
-  // 2. Data Ketua Tim Kerja (Katimja)
-  const katimjaList = [
+  // Data Subbagian Tata Usaha Lengkap
+  const subbagTU = {
+    title: "Subbagian Tata Usaha",
+    leadName: "Tri Yuliastini, S.Pi.",
+    subtitle: "Dukungan Administrasi, Persuratan, Keuangan & BMN",
+    members: [
+      { name: "Tri Yuliastini, S.Pi.", role: "Kepala Sub Bagian Tata Usaha", photo: fotoTri },
+      { name: "Mohamed Firdaus, S.E., M.A.B", role: "PPK (Pejabat Pembuat Komitmen)", photo: fotoFirdaus },
+      { name: "Ade Tabah Darma Mukti, S.Pi", role: "Pengelola Keuangan & Administrasi", photo: fotoAde },
+      { name: "Muhammad Idris", role: "SPK", photo: fallbackPhoto },
+      { name: "Yonathan Situmorang, A.Md.Ak", role: "BPP (Bendahara Pengeluaran Pembantu)", photo: fotoYoyo },
+      { name: "Syahril Fudin", role: "Staf Subbag TU / Layanan Persuratan", photo: fotoAik },
+      { name: "Asep Maryono", role: "Staf Subbag TU / Dukungan Operasional", photo: fotoAsep }
+    ]
+  };
+
+  // Data 3 Tim Kerja Was (Katimja) Lengkap
+  const teamList = [
     {
-      name: "Firman Fachrudin Firmansyah, S.Pi., M.Sc",
-      title: "Katimja Was Sekretariat Jenderal",
-      vice: "Lestari Tirtohening, S.E. (Wakil Timja Was)",
-      category: "Ketua Tim Kerja",
-      photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=500",
-      subUnits: [
-        "Biro Umum & Biro PBJ (Lestari Tirtohening, S.E. & Veronika Eri F, S.Pi)",
-        "Biro SDMAO & Biro Hukum (Muhamad Widodo, SH, MH)",
-        "Biro Perencanaan & Biro HKLN (Tutut Sumarmi, S.Sos & Ari Setiobudi)",
-        "Biro Keuangan, BMN & LPMUKP (Puji Astutuik, S.Pi & Hari Risnandar, A.Md.)",
-        "Pusdatin & Pusjakstra (Kukuh Priambodo, S.Kom & Wildan Faturizqi, A.Md)"
+      id: 1,
+      title: "Katimja Was Sekretariat Jenderal (Setjen)",
+      leadName: "Firman Fachrudin Firmansyah, S.Pi., M.Sc",
+      viceLead: "Lestari Tirtohening, S.E. (Wakil Timja Was)",
+      subtitle: "Pengawasan Setjen (7 Eselon II), Pusdatin & Puskajis",
+      icon: <Building2 className="w-5 h-5" />,
+      members: [
+        { name: "Firman Fachrudin Firmansyah, S.Pi., M.Sc", role: "Katimja Was Setjen", photo: fotoFirman },
+        { name: "Lestari Tirtohening, S.E.", role: "Wakil Katimja Was / Biro Umum & PBJ", photo: fallbackPhoto },
+        { name: "Veronika Eri F, S.Pi", role: "Tim Was Biro Umum & Biro PBJ", photo: fotoVeronika },
+        { name: "Muhamad Widodo, SH, MH", role: "Tim Was Biro SDMAO & Biro Hukum", photo: fotoWidodo },
+        { name: "Tutut Sumarmi, S.Sos", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoTutut },
+        { name: "Ari Setiobudi", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoAri },
+        { name: "Puji Astutuik, S.Pi", role: "Tim Was Biro Keuangan, BMN & LPMUKP", photo: fallbackPhoto },
+        { name: "Hari Risnandar, A.Md.", role: "Tim Was Biro Keuangan, BMN & LPMUKP", photo: fotoHari },
+        { name: "Kukuh Priambodo, S.Kom", role: "Tim Was Pusdatin & Pusjakstra", photo: fotoKukuh },
+        { name: "Wildan Faturizqi, A.Md", role: "Tim Was Pusdatin & Pusjakstra", photo: fallbackPhoto }
       ]
     },
     {
-      name: "Windy Skandiasari Yudanti, S.T., M.Ak",
-      title: "Katimja Was Ditjen Penataan Ruang Laut",
-      vice: "Haris Budianto, S.E (Wakil Timja Was)",
-      category: "Ketua Tim Kerja",
-      photo: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=500",
-      subUnits: [
-        "Sekretariat & Dit. Perencanaan Ruang Perairan (Maharami, S.E & Dody Alamsyah A.S.H, S.Pi)",
-        "Dit. Pembinaan Penataan Ruang Laut & Pengendalian (Dr. Wirata, S.E., M.E & Dianita Indah Prahmila, S.Pi, MSM)",
-        "Dit. Pemanfaatan Ruang Pesisir & Pulau Kecil (Ahmad N Ilham, S.PKP & Devinda Arsandi, S.Pi)"
+      id: 2,
+      title: "Katimja Was Ditjen Penataan Ruang Laut (DJPRL)",
+      leadName: "Windy Skandiasari Yudanti, S.T., M.Ak",
+      viceLead: "Haris Budianto, S.E (Wakil Timja Was)",
+      subtitle: "Pengawasan DJPRL (6 Eselon II) & 4 UPT Penataan Ruang Laut",
+      icon: <UserCheck className="w-5 h-5" />,
+      members: [
+        { name: "Windy Skandiasari Yudanti, S.T., M.Ak", role: "Katimja Was Ditjen PRL", photo: fotoWindy },
+        { name: "Haris Budianto, S.E", role: "Wakil Katimja Was", photo: fotoHaris },
+        { name: "Maharami, S.E", role: "Tim Was Sekretariat & Dit. Perencanaan Ruang Perairan", photo: fotoMaharami },
+        { name: "Dody Alamsyah A.S.H, S.Pi", role: "Tim Was Sekretariat & Dit. Perencanaan Ruang Perairan", photo: fotoDody },
+        { name: "Dr. Wirata, S.E., M.E", role: "Tim Was Dit. Pembinaan Penataan Ruang Laut & Pengendalian", photo: fotoWirata },
+        { name: "Dianita Indah Prahmila, S.Pi, MSM", role: "Tim Was Dit. Pembinaan Penataan Ruang Laut & Pengendalian", photo: fotoDianita },
+        { name: "Ahmad Nur Ilham, S.PKP", role: "Tim Was Dit. Pemanfaatan Ruang Pesisir & Pulau Kecil", photo: fotoIlham },
       ]
     },
     {
-      name: "Taufiqur Rahman NG, S.Pi.",
-      title: "Katimja Was Ditjen Pengelolaan Kelautan",
-      vice: "Wakil 1: Tengku Sonya Nirmala Hayati, S.Pi., M.Si. | Wakil 2: Sapnianti, S.Pi., M.M.",
-      category: "Ketua Tim Kerja",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=500",
-      subUnits: [
-        "Sekretariat & Dit. P3K (Tibyan D.M.P, S.Kom & Hanifa Dwi Santi, S.E)",
-        "Dit. Konservasi Ekosistem & Spesies (Faisal Reza P, S.E, M.M & M. Rizal A.T.N, S.Pi)",
-        "Dit. Jasa Bahari & Sumber Daya Kelautan (Adianto Nugroho, S.E & Tri Nur Utami, S.Pi)"
+      id: 3,
+      title: "Katimja Was Ditjen Pengelolaan Kelautan (DJPK)",
+      leadName: "Taufiqur Rahman NG, S.Pi.",
+      viceLead: "Wakil 1: Tengku Sonya Nirmala Hayati, S.Pi., M.Si. | Wakil 2: Sapnianti, S.Pi., M.M.",
+      subtitle: "Pengawasan DJPK (6 Eselon II) & 7 UPT Pengelolaan Kelautan",
+      icon: <Users className="w-5 h-5" />,
+      members: [
+        { name: "Taufiqur Rahman NG, S.Pi.", role: "Katimja Was Ditjen Pengelolaan Kelautan", photo: fotoTaufiqur },
+        { name: "Tengku Sonya Nirmala Hayati, S.Pi., M.Si.", role: "Wakil 1 Katimja Was", photo: fallbackPhoto },
+        { name: "Sapnianti, S.Pi., M.M.", role: "Wakil 2 Katimja Was", photo: fotoYeye },
+        { name: "Tibyan D.M.P, S.Kom", role: "Tim Was Sekretariat & Dit. P3K", photo: fallbackPhoto },
+        { name: "Hanifa Dwi Santi, S.E", role: "Tim Was Sekretariat & Dit. P3K", photo: fotoHanifa },
+        { name: "Faisal Reza P, S.E, M.M", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fotoFaisal },
+        { name: "M. Rizal A.T.N, S.Pi", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fallbackPhoto },
+        { name: "Adianto Nugroho, S.E", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan", photo: fotoAdianto },
+        { name: "Tri Nur Utami, S.Pi", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan", photo: fotoUtami }
       ]
     }
   ];
 
-  // 3. Ringkasan JFA (Jabatan Fungsional Auditor)
-  const jfaStats = [
-    { rank: "Auditor Utama", count: 1 },
-    { rank: "Auditor Madya", count: 7 },
-    { rank: "Auditor Muda", count: 9 },
-    { rank: "Auditor Pertama", count: 8 },
-    { rank: "Auditor Terampil", count: 2 },
-  ];
+  // Data Statistik JFA
+  const jfaData = {
+    total: 29,
+    stats: [
+      { rank: "Auditor Utama", count: 2 },
+      { rank: "Auditor Madya", count: 7 },
+      { rank: "Auditor Muda", count: 10 },
+      { rank: "Auditor Pertama", count: 8 },
+      { rank: "Auditor Terampil", count: 2 }
+    ],
+    auditors: [
+      { name: "Dr. Wirata, S.E., M.E", rank: "Auditor Utama", photo: fotoWirata },
+      { name: "Ir. Iriawanti", rank: "Auditor Utama", photo: fotoIriawanti },
+      { name: "Firman Fachrudin F, S.Pi., M.Sc", rank: "Auditor Madya", photo: fotoFirman },
+      { name: "Windy Skandiasari Y, S.T., M.Ak", rank: "Auditor Madya", photo: fotoWindy },
+      { name: "Haris Budianto, S.E", rank: "Auditor Muda", photo: fotoHaris },
+      { name: "Dianita Indah P, S.Pi, MSM", rank: "Auditor Pertama", photo: fotoDianita },
+      { name: "Veronika Eri F, S.Pi", rank: "Auditor Pertama", photo: fotoVeronika }
+    ]
+  };
 
   return (
     <section id="struktur" className="py-20 bg-neutral-50/80 text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header ala Emtek: Elegan, Bersih, dan Typography Subtiel */}
+        {/* Header Seksi */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-semibold tracking-widest text-sky-800 uppercase">
-            Management & Governance
-          </span>
+          <span className="text-xs font-semibold tracking-widest text-sky-800 uppercase">Management & Governance</span>
           <h2 className="text-3xl sm:text-4xl font-light text-slate-900 mt-2 tracking-tight">
-            Organization <span className="font-bold text-sky-950">Structure</span>
+            Struktur <span className="font-bold text-sky-950">Organisasi & Pegawai</span>
           </h2>
           <div className="w-12 h-0.5 bg-sky-800 mx-auto mt-4"></div>
-          <p className="mt-4 text-slate-500 text-sm leading-relaxed font-normal">
-            Struktur Kepemimpinan dan Tim Kerja Inspektorat I Kementerian Kelautan dan Perikanan TA 2026.
+          <p className="mt-3 text-slate-500 text-xs sm:text-sm">
+            Klik pada salah satu tim di bawah untuk melihat seluruh jajaran foto dan nama pegawai.
           </p>
         </div>
 
-        {/* Tab Switcher ala Emtek Website */}
-        <div className="flex justify-center mb-12 border-b border-slate-200">
-          <div className="flex gap-2 sm:gap-8 text-xs sm:text-sm font-medium">
+        {/* Tab Switcher */}
+        <div className="flex justify-center mb-10 border-b border-slate-200">
+          <div className="flex gap-4 sm:gap-8 text-xs sm:text-sm font-medium">
             <button
               onClick={() => setActiveTab('pimpinan')}
-              className={`pb-4 px-2 border-b-2 transition duration-200 uppercase tracking-wider ${
-                activeTab === 'pimpinan'
-                  ? 'border-sky-800 text-sky-950 font-bold'
-                  : 'border-transparent text-slate-400 hover:text-slate-700'
+              className={`pb-4 px-2 border-b-2 uppercase tracking-wider ${
+                activeTab === 'pimpinan' ? 'border-sky-800 text-sky-950 font-bold' : 'border-transparent text-slate-400 hover:text-slate-700'
               }`}
             >
-              Inspektur & Subbag TU
+              Inspektur & Pimpinan
+            </button>
+            <button
+              onClick={() => setActiveTab('subbag')}
+              className={`pb-4 px-2 border-b-2 uppercase tracking-wider ${
+                activeTab === 'subbag' ? 'border-sky-800 text-sky-950 font-bold' : 'border-transparent text-slate-400 hover:text-slate-700'
+              }`}
+            >
+              Subbag Tata Usaha
             </button>
             <button
               onClick={() => setActiveTab('katimja')}
-              className={`pb-4 px-2 border-b-2 transition duration-200 uppercase tracking-wider ${
-                activeTab === 'katimja'
-                  ? 'border-sky-800 text-sky-950 font-bold'
-                  : 'border-transparent text-slate-400 hover:text-slate-700'
+              className={`pb-4 px-2 border-b-2 uppercase tracking-wider ${
+                activeTab === 'katimja' ? 'border-sky-800 text-sky-950 font-bold' : 'border-transparent text-slate-400 hover:text-slate-700'
               }`}
             >
-              Ketua Tim Kerja (Katimja)
+              Tim Kerja Was (Katimja)
             </button>
             <button
               onClick={() => setActiveTab('jfa')}
-              className={`pb-4 px-2 border-b-2 transition duration-200 uppercase tracking-wider ${
-                activeTab === 'jfa'
-                  ? 'border-sky-800 text-sky-950 font-bold'
-                  : 'border-transparent text-slate-400 hover:text-slate-700'
+              className={`pb-4 px-2 border-b-2 uppercase tracking-wider ${
+                activeTab === 'jfa' ? 'border-sky-800 text-sky-950 font-bold' : 'border-transparent text-slate-400 hover:text-slate-700'
               }`}
             >
-              Jabatan Fungsional (JFA)
+              Tenaga Fungsional (JFA)
             </button>
           </div>
         </div>
 
         {/* TAB 1: PIMPINAN UTAMA */}
         {activeTab === 'pimpinan' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {topManagement.map((person, idx) => (
-              <div 
-                key={idx}
-                onClick={() => setSelectedPerson(person)}
-                className="group bg-white rounded-none border border-slate-200/80 p-6 hover:shadow-xl transition duration-300 cursor-pointer flex flex-col justify-between"
-              >
-                <div>
-                  <div className="aspect-[4/5] bg-slate-100 overflow-hidden mb-6 relative">
-                    <img 
-                      src={person.photo} 
-                      alt={person.name} 
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
-                    />
-                    <div className="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-semibold px-2.5 py-1 uppercase tracking-wider backdrop-blur-sm">
-                      {person.category}
-                    </div>
-                  </div>
-                  <span className="text-xs font-semibold text-sky-800 tracking-wider uppercase block mb-1">
-                    {person.title}
-                  </span>
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-800 transition">
-                    {person.name}
-                  </h3>
-                  {person.nip !== '-' && (
-                    <p className="text-xs text-slate-400 mt-0.5">NIP. {person.nip}</p>
-                  )}
+              <div key={idx} className="bg-white border border-slate-200/80 p-6 shadow-sm hover:shadow-md transition flex flex-col items-center text-center">
+                <div className="w-36 h-44 bg-slate-100 overflow-hidden mb-4 border border-slate-200">
+                  <img src={person.photo} alt={person.name} className="w-full h-full object-cover transition duration-500" />
                 </div>
-                <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-sky-800">
-                  <span>View Profile & Detail</span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition" />
-                </div>
+                <span className="text-xs font-bold text-sky-800 uppercase tracking-wider mb-1">{person.title}</span>
+                <h3 className="text-base font-extrabold text-slate-900">{person.name}</h3>
+                {person.nip !== '-' && <p className="text-xs text-slate-400 mt-0.5">NIP. {person.nip}</p>}
+                <p className="text-xs text-slate-500 mt-3 leading-relaxed border-t border-slate-100 pt-3">{person.description}</p>
               </div>
             ))}
           </div>
         )}
 
-        {/* TAB 2: KATIMJA (KETUA TIM KERJA) */}
+        {/* TAB 2: SUBBAG TATA USAHA */}
+        {activeTab === 'subbag' && (
+          <div className="bg-white border border-slate-200/80 p-6 sm:p-8">
+            <div className="mb-6 pb-4 border-b border-slate-100">
+              <span className="text-xs font-bold text-sky-800 uppercase tracking-wider">Subbagian Tata Usaha</span>
+              <h3 className="text-xl font-extrabold text-slate-900 mt-1">{subbagTU.title}</h3>
+              <p className="text-xs text-slate-500 mt-0.5">Kepala Subbag TU: <span className="font-bold text-slate-700">{subbagTU.leadName}</span> ({subbagTU.members.length} Pegawai & Staf)</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {subbagTU.members.map((person, idx) => (
+                <div key={idx} className="p-4 bg-slate-50 border border-slate-200/60 flex items-center gap-4 hover:bg-sky-50/50 transition">
+                  <div className="w-16 h-16 bg-slate-200 shrink-0 border border-slate-300 overflow-hidden">
+                    <img src={person.photo} alt={person.name} className="w-full h-full object-cover transition duration-300" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-xs sm:text-sm leading-snug">{person.name}</h4>
+                    <p className="text-[11px] text-sky-800 font-medium mt-1">{person.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* TAB 3: KATIMJA WAS */}
         {activeTab === 'katimja' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {katimjaList.map((team, idx) => (
+          <div className="space-y-4">
+            {teamList.map((team) => (
               <div 
-                key={idx}
-                onClick={() => setSelectedPerson(team)}
-                className="group bg-white border border-slate-200/80 p-6 hover:shadow-xl transition duration-300 cursor-pointer flex flex-col justify-between"
+                key={team.id}
+                onClick={() => setSelectedTeam(team)}
+                className="bg-white rounded-none p-6 border border-slate-200/80 shadow-sm hover:border-sky-800 hover:shadow-md transition duration-200 cursor-pointer flex items-center justify-between group"
               >
-                <div>
-                  <div className="aspect-[4/5] bg-slate-100 overflow-hidden mb-6 relative">
-                    <img 
-                      src={team.photo} 
-                      alt={team.name} 
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
-                    />
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-sky-50 group-hover:bg-sky-950 rounded-none text-sky-800 group-hover:text-white transition">
+                    {team.icon}
                   </div>
-                  <span className="text-xs font-semibold text-sky-800 tracking-wider uppercase block mb-1">
-                    Katimja
-                  </span>
-                  <h3 className="text-base font-bold text-slate-900 group-hover:text-sky-800 transition leading-snug">
-                    {team.title}
-                  </h3>
-                  <p className="text-xs font-semibold text-slate-700 mt-2">{team.name}</p>
-                  <p className="text-xs text-slate-400 mt-1 line-clamp-2">{team.vice}</p>
+                  <div>
+                    <h4 className="font-bold text-slate-900 group-hover:text-sky-900 transition text-base">
+                      {team.title}
+                    </h4>
+                    <p className="text-xs font-semibold text-sky-800 mt-0.5">Ketua: {team.leadName}</p>
+                    <p className="text-xs text-slate-500 mt-0.5">{team.subtitle}</p>
+                  </div>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-sky-800">
-                  <span>Lihat Anggota Tim ({team.subUnits.length})</span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="hidden sm:inline-block text-xs text-sky-800 font-semibold opacity-0 group-hover:opacity-100 transition">
+                    Lihat Foto Anggota ({team.members.length})
+                  </span>
+                  <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-sky-900 group-hover:translate-x-1 transition" />
                 </div>
               </div>
             ))}
           </div>
         )}
 
-        {/* TAB 3: STATISTIK JFA */}
+        {/* TAB 4: JABATAN FUNGSIONAL AUDITOR (JFA) */}
         {activeTab === 'jfa' && (
-          <div className="max-w-3xl mx-auto bg-white border border-slate-200/80 p-8 sm:p-10">
+          <div className="bg-white border border-slate-200/80 p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
               <Award className="w-6 h-6 text-sky-800" />
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Jabatan Fungsional Auditor (JFA)</h3>
-                <p className="text-xs text-slate-500">Komposisi Tenaga Fungsional Pengawasan Inspektorat I</p>
+                <p className="text-xs text-slate-500">Total Keseluruhan: <span className="font-bold text-sky-900">{jfaData.total} Auditor</span></p>
               </div>
             </div>
 
-            <div className="space-y-4">
-              {jfaStats.map((stat, idx) => (
-                <div key={idx} className="flex justify-between items-center p-3.5 bg-slate-50 border border-slate-100 text-sm">
-                  <span className="font-semibold text-slate-700">{stat.rank}</span>
-                  <span className="font-extrabold text-sky-900 bg-sky-100/70 px-3 py-1 text-xs rounded">
-                    {stat.count} Personel
-                  </span>
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+              {jfaData.stats.map((stat, idx) => (
+                <div key={idx} className="p-3 bg-slate-50 border border-slate-200 text-center">
+                  <span className="block text-lg font-black text-sky-900">{stat.count}</span>
+                  <span className="text-[11px] font-semibold text-slate-600 block">{stat.rank}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-200 flex justify-between items-center text-base font-extrabold text-slate-900">
-              <span>Total Keseluruhan JFA</span>
-              <span className="text-sky-900 text-lg">27 Auditor</span>
+            <h4 className="text-xs font-bold uppercase text-slate-500 tracking-wider mb-4">Jajaran Pegawai Fungsional Auditor:</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {jfaData.auditors.map((aud, idx) => (
+                <div key={idx} className="p-3 bg-slate-50 border border-slate-100 flex items-center gap-3">
+                  <div className="w-12 h-12 bg-slate-200 shrink-0 border border-slate-300 overflow-hidden">
+                    <img src={aud.photo} alt={aud.name} className="w-full h-full object-cover transition" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 text-xs">{aud.name}</h5>
+                    <p className="text-[10px] text-sky-800 font-medium mt-0.5">{aud.rank}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}
 
       </div>
 
-      {/* MODAL DETAIL ELEGAN ALA EMTEK */}
-      {selectedPerson && (
+      {/* MODAL POPUP KATIMJA */}
+      {selectedTeam && (
         <div className="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative my-8 border-t-4 border-sky-800 animate-in fade-in duration-200">
+          <div className="bg-white border-t-4 border-sky-900 max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
             
             <button 
-              onClick={() => setSelectedPerson(null)}
+              onClick={() => setSelectedTeam(null)}
               className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 transition"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5" />
             </button>
 
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <div className="w-32 h-40 bg-slate-100 shrink-0 overflow-hidden shadow-sm">
-                <img 
-                  src={selectedPerson.photo} 
-                  alt={selectedPerson.name} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="space-y-2 flex-1">
-                <span className="text-xs font-bold text-sky-800 uppercase tracking-widest">
-                  {selectedPerson.title}
-                </span>
-                <h3 className="text-xl font-extrabold text-slate-900 leading-snug">
-                  {selectedPerson.name}
-                </h3>
-                {selectedPerson.nip && selectedPerson.nip !== '-' && (
-                  <p className="text-xs text-slate-400 font-medium">NIP. {selectedPerson.nip}</p>
-                )}
-                {selectedPerson.vice && (
-                  <p className="text-xs text-sky-900 font-semibold pt-1">{selectedPerson.vice}</p>
-                )}
-              </div>
-            </div>
-
-            {/* Rincian Sub-Unit atau Profil */}
-            <div className="mt-6 pt-6 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {selectedPerson.bio && (
-                <div>
-                  <h4 className="font-bold text-slate-900 uppercase text-xs mb-2">Profil & Peran Executive:</h4>
-                  <p>{selectedPerson.bio}</p>
-                </div>
-              )}
-
-              {selectedPerson.subUnits && (
-                <div>
-                  <h4 className="font-bold text-slate-900 uppercase text-xs mb-3">Unit Kerja & Anggota Pengawasan:</h4>
-                  <ul className="space-y-2">
-                    {selectedPerson.subUnits.map((sub, i) => (
-                      <li key={i} className="p-3 bg-slate-50 border-l-2 border-sky-800 text-slate-700 font-medium">
-                        {sub}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="mb-6 pb-4 border-b border-slate-100">
+              <span className="text-xs font-bold text-sky-800 uppercase tracking-wider block mb-1">
+                Seluruh Pegawai & Anggota Tim
+              </span>
+              <h3 className="text-xl font-extrabold text-slate-900">
+                {selectedTeam.title}
+              </h3>
+              <p className="text-xs font-bold text-sky-900 mt-1">Ketua: {selectedTeam.leadName}</p>
+              {selectedTeam.viceLead && (
+                <p className="text-xs text-slate-500 font-medium mt-0.5">{selectedTeam.viceLead}</p>
               )}
             </div>
 
-            <div className="mt-8 pt-4 border-t border-slate-100 text-right">
+            {/* Grid Foto Pegawai Tim */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[55vh] overflow-y-auto pr-1">
+              {selectedTeam.members.map((person, idx) => (
+                <div key={idx} className="bg-slate-50 p-3.5 border border-slate-200/80 flex items-center gap-3.5 hover:bg-sky-50/50 transition">
+                  <div className="w-14 h-16 bg-slate-200 border border-slate-300 shrink-0 overflow-hidden">
+                    <img 
+                      src={person.photo} 
+                      alt={person.name} 
+                      className="w-full h-full object-cover transition"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-slate-900 text-xs sm:text-sm leading-snug">{person.name}</h4>
+                    <p className="text-[11px] text-sky-800 font-medium mt-0.5">{person.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-100 text-right">
               <button 
-                onClick={() => setSelectedPerson(null)}
+                onClick={() => setSelectedTeam(null)}
                 className="bg-slate-900 text-white font-medium text-xs px-6 py-2.5 hover:bg-sky-900 transition uppercase tracking-wider"
               >
-                Close
+                Tutup Jendela
               </button>
             </div>
 
