@@ -36,7 +36,7 @@ export default function About() {
         
         {/* Dasar Hukum & Tugas Utama */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-semibold tracking-widest text-sky-900 uppercase">
+          <span className="text-xl font-semibold tracking-widest text-sky-900 uppercase">
             Dasar Hukum & Tugas Pokok
           </span>
           <h2 className="text-3xl sm:text-4xl font-light text-slate-900 mt-2 tracking-tight">
@@ -64,7 +64,7 @@ export default function About() {
         {/* Program Prioritas (6 Program Utama) */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-semibold tracking-widest text-sky-900 uppercase">Fokus Pengawasan</span>
+            <span className="text-xl font-semibold tracking-widest text-sky-900 uppercase">Fokus Pengawasan</span>
             <h3 className="text-2xl font-bold text-slate-900 mt-1">6 Program Prioritas TA 2026</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,7 +84,7 @@ export default function About() {
         {/* Target Indikator Kinerja Utama (IKU) */}
         <div className="bg-slate-950 text-white p-8 sm:p-12 border border-slate-900">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-semibold tracking-widest text-sky-400 uppercase">Akurasi & Standar</span>
+            <span className="text-2xl font-semibold tracking-widest text-sky-400 uppercase">Target</span>
             <h3 className="text-2xl font-light text-white mt-1">Indikator Kinerja Utama <span className="font-bold">TA 2026</span></h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

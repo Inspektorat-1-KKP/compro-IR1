@@ -42,7 +42,7 @@ export default function Structure() {
   // Data Pimpinan Utama
   const topManagement = [
     {
-      name: "Dr. Abdul Mubin, ST., SH., MH., CSSL",
+      name: "Dr. Abdul Mubin, S.T., S.H., M.H., CSSL",
       nip: "197101131996031001",
       title: "Inspektur I",
       photo: fotoMubin,
@@ -51,7 +51,7 @@ export default function Structure() {
     {
       name: "Ir. Iriawanti",
       nip: "196407141992032004",
-      title: "Koordinator Pengawasan",
+      title: "Auditor Ahli Utama / Koordinator Pengawasan",
       photo: fotoIriawanti,
       description: "Mengoordinasikan pelaksanaan pengawasan teknis intern secara independen dan akuntabel."
     }
@@ -64,12 +64,12 @@ export default function Structure() {
     subtitle: "Dukungan Administrasi, Persuratan, Keuangan & BMN",
     members: [
       { name: "Tri Yuliastini, S.Pi.", role: "Kepala Sub Bagian Tata Usaha", photo: fotoTri },
-      { name: "Mohamed Firdaus, S.E., M.A.B", role: "PPK (Pejabat Pembuat Komitmen)", photo: fotoFirdaus },
-      { name: "Ade Tabah Darma Mukti, S.Pi", role: "Pengelola Keuangan & Administrasi", photo: fotoAde },
-      { name: "Muhammad Idris", role: "SPK", photo: fallbackPhoto },
-      { name: "Yonathan Situmorang, A.Md.Ak", role: "BPP (Bendahara Pengeluaran Pembantu)", photo: fotoYoyo },
-      { name: "Syahril Fudin", role: "Staf Subbag TU / Layanan Persuratan", photo: fotoAik },
-      { name: "Asep Maryono", role: "Staf Subbag TU / Dukungan Operasional", photo: fotoAsep }
+      { name: "Mochamad Firdaus, S.E., M.A.B", role: "Analis Pengelolaan Keuangan APBN Ahli Madya / PPK", photo: fotoFirdaus },
+      { name: "Ade Tabah Darma Mukti, S.Pi.", role: "Perencana Ahli Muda / Pengelola Keuangan", photo: fotoAde },
+      { name: "Muhammad Idris", role: "Pengadministrasi Perkantoran / SPK", photo: fallbackPhoto },
+      { name: "Yonathan Situmorang, A.Md.Ak", role: "Pranata Keuangan APBN Terampil / BPP", photo: fotoYoyo },
+      { name: "Syahril Fudin", role: "Operator Layanan Operasional / Layanan Persuratan", photo: fotoAik },
+      { name: "Asep Maryono", role: "Pengemudi / Dukungan Operasional", photo: fotoAsep }
     ]
   };
 
@@ -78,38 +78,39 @@ export default function Structure() {
     {
       id: 1,
       title: "Katimja Was Sekretariat Jenderal (Setjen)",
-      leadName: "Firman Fachrudin Firmansyah, S.Pi., M.Sc",
+      leadName: "Firman Fachrudin Firmansyah, S.Pi., M.Sc.",
       viceLead: "Lestari Tirtohening, S.E. (Wakil Timja Was)",
       subtitle: "Pengawasan Setjen (7 Eselon II), Pusdatin & Puskajis",
       icon: <Building2 className="w-5 h-5" />,
       members: [
-        { name: "Firman Fachrudin Firmansyah, S.Pi., M.Sc", role: "Katimja Was Setjen", photo: fotoFirman },
-        { name: "Lestari Tirtohening, S.E.", role: "Wakil Katimja Was / Biro Umum & PBJ", photo: fallbackPhoto },
-        { name: "Veronika Eri F, S.Pi", role: "Tim Was Biro Umum & Biro PBJ", photo: fotoVeronika },
-        { name: "Muhamad Widodo, SH, MH", role: "Tim Was Biro SDMAO & Biro Hukum", photo: fotoWidodo },
-        { name: "Tutut Sumarmi, S.Sos", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoTutut },
-        { name: "Ari Setyobudi", role: "Tim Was Biro Perencanaan & Biro HKLN", photo: fotoAri },
-        { name: "Puji Astutuik, S.Pi", role: "Tim Was Biro Keuangan, BMN & LPMUKP", photo: fallbackPhoto },
-        { name: "Hari Risnandar, A.Md.", role: "Tim Was Biro Keuangan, BMN & LPMUKP", photo: fotoHari },
-        { name: "Kukuh Priambodo, S.Kom", role: "Tim Was Pusdatin & Pusjakstra", photo: fotoKukuh },
-        { name: "Wildan Faturizqi, A.Md", role: "Tim Was Pusdatin & Pusjakstra", photo: fallbackPhoto }
+        { name: "Firman Fachrudin Firmansyah, S.Pi., M.Sc.", role: "Katimja Was Setjen / Auditor Ahli Madya", photo: fotoFirman },
+        { name: "Lestari Tirtohening, S.E.", role: "Wakil Katimja Was / Auditor Ahli Madya", photo: fallbackPhoto },
+        { name: "Veronika Eri Febriani, S.Pi.", role: "Tim Was Biro Umum & Biro PBJ / Auditor Ahli Pertama", photo: fotoVeronika },
+        { name: "Muhamad Widodo, S.H., M.H.", role: "Tim Was Biro SDMAO & Biro Hukum / Auditor Ahli Muda", photo: fotoWidodo },
+        { name: "Tutut Sumarmi, S.Sos.", role: "Tim Was Biro Perencanaan & Biro HKLN / Auditor Ahli Muda", photo: fotoTutut },
+        { name: "Ari Setyobudi, S.Pi.", role: "Tim Was Biro Perencanaan & Biro HKLN / Auditor Ahli Pertama", photo: fotoAri },
+        { name: "Puji Astutik, S.Pi.", role: "Tim Was Biro Keuangan, BMN & LPMUKP / Auditor Ahli Muda", photo: fallbackPhoto },
+        { name: "Hari Risnandar, A.M.d.M", role: "Tim Was Biro Keuangan, BMN & LPMUKP / Auditor Terampil", photo: fotoHari },
+        { name: "Kukuh Priambodo, S.Kom.", role: "Tim Was Pusdatin & Pusjakstra / Auditor Ahli Muda", photo: fotoKukuh },
+        { name: "Wildan Fathurizqi, A.Md.Ak", role: "Tim Was Pusdatin & Pusjakstra / Auditor Terampil", photo: fallbackPhoto }
       ]
     },
     {
       id: 2,
       title: "Katimja Was Ditjen Penataan Ruang Laut (DJPRL)",
-      leadName: "Windy Skandiasari Yudanti, S.T., M.Ak",
-      viceLead: "Haris Budianto, S.E (Wakil Timja Was)",
+      leadName: "Windy Skandiasari Yudanti, S.T., M.Ak.",
+      viceLead: "Haris Budianto, S.E. (Wakil Timja Was)",
       subtitle: "Pengawasan DJPRL (6 Eselon II) & 4 UPT Penataan Ruang Laut",
       icon: <UserCheck className="w-5 h-5" />,
       members: [
-        { name: "Windy Skandiasari Yudanti, S.T., M.Ak", role: "Katimja Was Ditjen PRL", photo: fotoWindy },
-        { name: "Haris Budianto, S.E", role: "Wakil Katimja Was", photo: fotoHaris },
-        { name: "Maharami, S.E", role: "Tim Was Sekretariat & Dit. Perencanaan Ruang Perairan", photo: fotoMaharami },
-        { name: "Dody Alamsyah A.S.H, S.Pi", role: "Tim Was Sekretariat & Dit. Perencanaan Ruang Perairan", photo: fotoDody },
-        { name: "Dr. Wirata, S.E., M.E", role: "Tim Was Dit. Pembinaan Penataan Ruang Laut & Pengendalian", photo: fotoWirata },
-        { name: "Dianita Indah Prahmila, S.Pi, MSM", role: "Tim Was Dit. Pembinaan Penataan Ruang Laut & Pengendalian", photo: fotoDianita },
-        { name: "Ahmad Nur Ilham, S.PKP", role: "Tim Was Dit. Pemanfaatan Ruang Pesisir & Pulau Kecil", photo: fotoIlham },
+        { name: "Windy Skandiasari Yudanti, S.T., M.Ak.", role: "Katimja Was Ditjen PRL / Auditor Ahli Madya", photo: fotoWindy },
+        { name: "Haris Budianto, S.E.", role: "Wakil Katimja Was / Auditor Ahli Madya", photo: fotoHaris },
+        { name: "Maharami, S.E.", role: "Tim Was Sekretariat & Dit. Perencanaan Ruang Perairan / Auditor Ahli Muda", photo: fotoMaharami },
+        { name: "Dody Alamsyah A.S. Hasibuan, S.Pi.", role: "Tim Was Sekretariat & Dit. Perencanaan Ruang Perairan / Auditor Ahli Pertama", photo: fotoDody },
+        { name: "Dr. Wirata, S.E., M.E.", role: "Tim Was Dit. Pembinaan Penataan Ruang Laut & Pengendalian / Auditor Ahli Muda", photo: fotoWirata },
+        { name: "Dianita Indah Prahmila, S.Pi., M.S.M", role: "Tim Was Dit. Pembinaan Penataan Ruang Laut & Pengendalian / Auditor Ahli Pertama", photo: fotoDianita },
+        { name: "Ahmad Nur Ilham, S.PKP.", role: "Tim Was Dit. Pemanfaatan Ruang Pesisir & Pulau Kecil / Auditor Ahli Muda", photo: fotoIlham },
+        { name: "Devinda Arsandi, S.Pi.", role: "Tim Was Dit. Pemanfaatan Ruang Pesisir & Pulau Kecil / Auditor Ahli Pertama", photo: fallbackPhoto }
       ]
     },
     {
@@ -120,37 +121,67 @@ export default function Structure() {
       subtitle: "Pengawasan DJPK (6 Eselon II) & 7 UPT Pengelolaan Kelautan",
       icon: <Users className="w-5 h-5" />,
       members: [
-        { name: "Taufiqur Rahman NG, S.Pi.", role: "Katimja Was Ditjen Pengelolaan Kelautan", photo: fotoTaufiqur },
-        { name: "Tengku Sonya Nirmala Hayati, S.Pi., M.Si.", role: "Wakil 1 Katimja Was", photo: fallbackPhoto },
-        { name: "Sapnianti, S.Pi., M.M.", role: "Wakil 2 Katimja Was", photo: fotoYeye },
-        { name: "Tibyan D.M.P, S.Kom", role: "Tim Was Sekretariat & Dit. P3K", photo: fallbackPhoto },
-        { name: "Hanifa Dwi Santi, S.E", role: "Tim Was Sekretariat & Dit. P3K", photo: fotoHanifa },
-        { name: "Faisal Reza P, S.E, M.M", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fotoFaisal },
-        { name: "M. Rizal A.T.N, S.Pi", role: "Tim Was Dit. Konservasi Ekosistem & Spesies", photo: fotoRizal },
-        { name: "Adianto Nugroho, S.E", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan", photo: fotoAdianto },
-        { name: "Tri Nur Utami, S.Pi", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan", photo: fotoUtami }
+        { name: "Taufiqur Rahman NG, S.Pi.", role: "Katimja Was Ditjen Pengelolaan Kelautan / Auditor Ahli Madya", photo: fotoTaufiqur },
+        { name: "Tengku Sonya Nirmala Hayati, S.Pi., M.Si.", role: "Wakil 1 Katimja Was / Auditor Ahli Madya", photo: fallbackPhoto },
+        { name: "Sapnianti, S.Pi., M.M.", role: "Wakil 2 Katimja Was / Auditor Ahli Madya", photo: fotoYeye },
+        { name: "Tibyan Dimas Marham Putra, S.Kom.", role: "Tim Was Sekretariat & Dit. P3K / Auditor Ahli Muda", photo: fallbackPhoto },
+        { name: "Hanifa Dwi Santi, S.E.", role: "Tim Was Sekretariat & Dit. P3K / Auditor Ahli Pertama", photo: fotoHanifa },
+        { name: "Faisal Reza Pahlevi, S.E., M.M.", role: "Tim Was Dit. Konservasi Ekosistem & Spesies / Auditor Ahli Muda", photo: fotoFaisal },
+        { name: "Muchammad Rizal Adha Taruna Negara, S.Pi.", role: "Tim Was Dit. Konservasi Ekosistem & Spesies / Auditor Ahli Pertama", photo: fotoRizal },
+        { name: "Adianto Nugroho, S.E.", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan / Auditor Ahli Muda", photo: fotoAdianto },
+        { name: "Tri Nur Utami, S.Pi.", role: "Tim Was Dit. Jasa Bahari & Sumber Daya Kelautan / Auditor Ahli Pertama", photo: fotoUtami }
       ]
     }
   ];
 
-  // Data Statistik JFA
+  // Data Statistik JFA (28 Auditor Lengkap Sesuai Dokumen)
   const jfaData = {
-    total: 29,
+    total: 28,
     stats: [
-      { rank: "Auditor Utama", count: 2 },
+      { rank: "Auditor Utama", count: 1 },
       { rank: "Auditor Madya", count: 7 },
       { rank: "Auditor Muda", count: 10 },
       { rank: "Auditor Pertama", count: 8 },
       { rank: "Auditor Terampil", count: 2 }
     ],
     auditors: [
-      { name: "Dr. Wirata, S.E., M.E", rank: "Auditor Utama", photo: fotoWirata },
-      { name: "Ir. Iriawanti", rank: "Auditor Utama", photo: fotoIriawanti },
-      { name: "Firman Fachrudin F, S.Pi., M.Sc", rank: "Auditor Madya", photo: fotoFirman },
-      { name: "Windy Skandiasari Y, S.T., M.Ak", rank: "Auditor Madya", photo: fotoWindy },
-      { name: "Haris Budianto, S.E", rank: "Auditor Muda", photo: fotoHaris },
-      { name: "Dianita Indah P, S.Pi, MSM", rank: "Auditor Pertama", photo: fotoDianita },
-      { name: "Veronika Eri F, S.Pi", rank: "Auditor Pertama", photo: fotoVeronika }
+      // Auditor Utama
+      { name: "Ir. Iriawanti", rank: "Auditor Ahli Utama", photo: fotoIriawanti },
+      
+      // Auditor Madya
+      { name: "Windy Skandiasari Yudanti, S.T., M.Ak.", rank: "Auditor Ahli Madya", photo: fotoWindy },
+      { name: "Tengku Sonya Nirmala Hayati, S.Pi., M.Si", rank: "Auditor Ahli Madya", photo: fallbackPhoto },
+      { name: "Taufiqur Rahman NG, S.Pi.", rank: "Auditor Ahli Madya", photo: fotoTaufiqur },
+      { name: "Firman Fachrudin Firmansyah, S.Pi., M.Sc.", rank: "Auditor Ahli Madya", photo: fotoFirman },
+      { name: "Lestari Tirtohening, S.E.", rank: "Auditor Ahli Madya", photo: fallbackPhoto },
+      { name: "Haris Budianto, S.E.", rank: "Auditor Ahli Madya", photo: fotoHaris },
+      { name: "Sapnianti, S.Pi., M.M.", rank: "Auditor Ahli Madya", photo: fotoYeye },
+      
+      // Auditor Muda
+      { name: "Kukuh Priambodo, S.Kom.", rank: "Auditor Ahli Muda", photo: fotoKukuh },
+      { name: "Dr. Wirata, S.E., M.E.", rank: "Auditor Ahli Muda", photo: fotoWirata },
+      { name: "Faisal Reza Pahlevi, S.E., M.M.", rank: "Auditor Ahli Muda", photo: fotoFaisal },
+      { name: "Adianto Nugroho, S.E.", rank: "Auditor Ahli Muda", photo: fotoAdianto },
+      { name: "Tutut Sumarmi, S.Sos.", rank: "Auditor Ahli Muda", photo: fotoTutut },
+      { name: "Puji Astutik, S.Pi.", rank: "Auditor Ahli Muda", photo: fallbackPhoto },
+      { name: "Muhamad Widodo, S.H., M.H.", rank: "Auditor Ahli Muda", photo: fotoWidodo },
+      { name: "Tibyan Dimas Marham Putra, S.Kom.", rank: "Auditor Ahli Muda", photo: fallbackPhoto },
+      { name: "Ahmad Nur Ilham, S.PKP.", rank: "Auditor Ahli Muda", photo: fotoIlham },
+      { name: "Maharami, S.E.", rank: "Auditor Ahli Muda", photo: fotoMaharami },
+
+      // Auditor Pertama
+      { name: "Hanifa Dwi Santi, S.E.", rank: "Auditor Ahli Pertama", photo: fotoHanifa },
+      { name: "Ari Setyobudi, S.Pi.", rank: "Auditor Ahli Pertama", photo: fotoAri },
+      { name: "Devinda Arsandi, S.Pi.", rank: "Auditor Ahli Pertama", photo: fallbackPhoto },
+      { name: "Veronika Eri Febriani, S.Pi.", rank: "Auditor Ahli Pertama", photo: fotoVeronika },
+      { name: "Tri Nur Utami, S.Pi.", rank: "Auditor Ahli Pertama", photo: fotoUtami },
+      { name: "Dody Alamsyah A.S. Hasibuan, S.Pi.", rank: "Auditor Ahli Pertama", photo: fotoDody },
+      { name: "Muchammad Rizal Adha Taruna Negara, S.Pi.", rank: "Auditor Ahli Pertama", photo: fotoRizal },
+      { name: "Dianita Indah Prahmila, S.Pi., M.S.M", rank: "Auditor Ahli Pertama", photo: fotoDianita },
+
+      // Auditor Terampil
+      { name: "Wildan Fathurizqi, A.Md.Ak", rank: "Auditor Terampil", photo: fallbackPhoto },
+      { name: "Hari Risnandar, A.M.d.M", rank: "Auditor Terampil", photo: fotoHari }
     ]
   };
 
@@ -160,7 +191,7 @@ export default function Structure() {
         
         {/* Header Seksi */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-semibold tracking-widest text-sky-800 uppercase">Management & Governance</span>
+          <span className="text-xl font-semibold tracking-widest text-sky-800 uppercase">Management & Governance</span>
           <h2 className="text-3xl sm:text-4xl font-light text-slate-900 mt-2 tracking-tight">
             Struktur <span className="font-bold text-sky-950">Organisasi & Pegawai</span>
           </h2>

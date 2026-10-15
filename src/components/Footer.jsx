@@ -42,7 +42,7 @@ export default function Footer() {
             </p>
             <p className="flex items-center gap-2 text-xs text-slate-400 font-light">
               <Mail className="w-4 h-4 text-sky-400 shrink-0" />
-              itjen@kkp.go.id
+              inspektorat001@gmail.com
             </p>
           </div>
 
